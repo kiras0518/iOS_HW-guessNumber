@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Nhg-lS-Gak">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--宇宙霹靂無敵猜數字-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GuessNumber" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fvy-Bb-kQ6">
+                                <color key="backgroundColor" red="0.95686274509803915" green="0.94509803921568625" blue="0.73333333333333328" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="確定"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="24"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="doNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AcW-KJ-Ich"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="IGv-tG-gcw">
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="😄" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GCx-7O-fef">
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.92941176470588238" green="0.41568627450980389" blue="0.3529411764705882" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="daH-Bf-Pmy">
+                                <color key="backgroundColor" red="0.95686274509803915" green="0.94509803921568625" blue="0.73333333333333328" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="重來"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="24"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="again:" destination="BYZ-38-t0r" eventType="touchUpInside" id="V2H-r8-TMW"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="請輸入1~10的數字" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PCZ-EN-QKK">
+                                <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="22"/>
+                                <color key="textColor" red="1" green="0.38039215686274508" blue="0.2196078431372549" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="來猜啊!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6zb-ld-dgf">
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="0.92941176470588238" green="0.41568627450980389" blue="0.3529411764705882" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.6588235294117647" green="0.84705882352941175" blue="0.72549019607843135" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="IGv-tG-gcw" firstAttribute="top" secondItem="PCZ-EN-QKK" secondAttribute="bottom" constant="60" id="0c3-R6-9eC"/>
+                            <constraint firstItem="fvy-Bb-kQ6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="0jY-rj-06x"/>
+                            <constraint firstItem="IGv-tG-gcw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="80" id="1VJ-qs-1g2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="PCZ-EN-QKK" secondAttribute="trailing" constant="40" id="3yp-Lu-t4e"/>
+                            <constraint firstItem="daH-Bf-Pmy" firstAttribute="leading" secondItem="fvy-Bb-kQ6" secondAttribute="trailing" constant="20" id="5zg-Mj-NBG"/>
+                            <constraint firstItem="PCZ-EN-QKK" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="76D-7F-Pza"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="fvy-Bb-kQ6" secondAttribute="bottom" constant="20" id="9pI-B4-ai0"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="daH-Bf-Pmy" secondAttribute="bottom" constant="20" id="9wV-cD-S71"/>
+                            <constraint firstItem="daH-Bf-Pmy" firstAttribute="width" secondItem="fvy-Bb-kQ6" secondAttribute="width" id="Ecz-PN-nMa"/>
+                            <constraint firstItem="6zb-ld-dgf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="I52-0J-6Ct"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="GCx-7O-fef" secondAttribute="trailing" constant="80" id="IX6-vr-0I7"/>
+                            <constraint firstItem="6zb-ld-dgf" firstAttribute="top" secondItem="GCx-7O-fef" secondAttribute="bottom" constant="60" id="Nar-PD-bX1"/>
+                            <constraint firstItem="PCZ-EN-QKK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="40" id="SkC-0B-1wl"/>
+                            <constraint firstItem="GCx-7O-fef" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="80" id="UX7-08-vox"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="IGv-tG-gcw" secondAttribute="trailing" constant="80" id="aW1-sM-w7q"/>
+                            <constraint firstAttribute="trailing" secondItem="daH-Bf-Pmy" secondAttribute="trailing" constant="20" id="hmR-QK-uJ1"/>
+                            <constraint firstItem="GCx-7O-fef" firstAttribute="top" secondItem="IGv-tG-gcw" secondAttribute="bottom" constant="60" id="ma0-29-IRE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6zb-ld-dgf" secondAttribute="trailing" constant="30" id="nYP-wc-XbS"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="宇宙霹靂無敵猜數字" id="mXp-hF-1eh"/>
+                    <connections>
+                        <outlet property="guess_count" destination="GCx-7O-fef" id="gcC-Uf-GGF"/>
+                        <outlet property="input_guess" destination="IGv-tG-gcw" id="lOk-2V-Kw5"/>
+                        <outlet property="result" destination="6zb-ld-dgf" id="MQs-aB-gvt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1072.5" y="137.32394366197184"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="pQm-t3-U9L">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Nhg-lS-Gak" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="MXD-hf-Pie">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="l1B-2H-P3X"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xUP-kg-1kb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="295" y="139"/>
+        </scene>
+    </scenes>
+</document>

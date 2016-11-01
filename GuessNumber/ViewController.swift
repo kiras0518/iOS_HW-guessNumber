@@ -25,13 +25,13 @@ class ViewController: UIViewController {
         /*if (user_guess! < 0) || (user_guess! > 10) {
             result.text = "你輸入怪怪的喔!" //當輸入不在數字範圍內或沒輸入數字,跳出訊息!
         }*/
+        if input_guess.text!.characters.count > 0 {result.text = "你輸入怪怪的喔!"}
         
         if Count > 0 {
             Count -= 1
             if (user_guess == Answer) {
                 result.text = "答對了!😎"
-            }
-            if (user_guess! > Answer) {
+            } else if (user_guess! > Answer) {
                 result.text = "太大!"
             } else if(user_guess! < Answer) {
                 result.text = "太小!"
@@ -41,7 +41,6 @@ class ViewController: UIViewController {
             } else {
                 guess_count.text = "剩下\(Count)次機會"
             }
-            
         }
         
     }

@@ -21,34 +21,45 @@ class ViewController: UIViewController {
     @IBAction func doNumber(_ sender: AnyObject) {
         
         let user_guess = Int(input_guess.text!)
+        //TEST
         //if (input_guess.text! == nil) || (input_guess.text == "")
         /*if (user_guess! < 0) || (user_guess! > 10) {
             result.text = "你輸入怪怪的喔!" //當輸入不在數字範圍內或沒輸入數字,跳出訊息!
         }*/
-        if input_guess.text!.characters.count > 0 {result.text = "你輸入怪怪的喔!"}
-        
-        if Count > 0 {
-            Count -= 1
-            if (user_guess == Answer) {
-                result.text = "答對了!😎"
-            } else if (user_guess! > Answer) {
-                result.text = "太大!"
-            } else if(user_guess! < Answer) {
-                result.text = "太小!"
+        //if input_guess.text!.characters.count > 0 {result.text = "你輸入怪怪的喔!"}
+        if user_guess != nil {
+            if user_guess! >= 1 && user_guess! <= 10 {
+                if Count > 0 {
+                    Count -= 1
+                    if (user_guess == Answer) {
+                        result.text = "答對了!😎"
+                    }
+                    if (user_guess! > Answer) {
+                        result.text = "太大!"
+                    } else if(user_guess! < Answer) {
+                        result.text = "太小!"
+                    }
+                    if Count == 0 {
+                        result.text = "不能再猜了!答案是:\(Answer)"
+                    } else {
+                        guess_count.text = "剩下\(Count)次機會"
+                    }
+                }
+            }else {
+                result.text = "輸入不在範圍內!"
             }
-            if Count == 0 {
-                result.text = "不能再猜了!答案是:\(Answer)"
-            } else {
-                guess_count.text = "剩下\(Count)次機會"
-            }
+        } else {
+            result.text = "你輸入的不是數字!"
         }
+
         
-    }
+        
+}
+        
     
     @IBAction func again(_ sender: AnyObject) {
         viewDidLoad()
         Count = 6
-        //input_guess.text = ""
         guess_count.text = "😙"
         result.text = "來猜啊!"
     }
